@@ -1,0 +1,90 @@
+/* RESET CSS */
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+
+img,picture{
+  display: block;
+  width: 100%;
+}
+body{
+  background-color: #fafafa ;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* TYPOGRAPHY */
+h1,h2,p{
+  margin: 0;
+}
+h1{
+  font-size: 2.25rem;
+}
+h2{
+  font-size: 1.3rem;
+}
+.logo{
+  font-family: 'PT Mono', monospace;;
+}
+
+
+
+/* NAVIGATION */
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.main-nav ul{
+  display: flex;
+  list-style: none;
+}
+.nav-link{
+  border: 1px solid blue;
+  margin-left: .8em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* LAYOUT*/
+
+.container{
+  padding: 0 1em;
+  max-width: 60rem;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+.intro {
+  color: #fafafa;
+  background-image: url(images/blog-image-hero.png);
+  background-color: #404040;
+  background-size: cover;
+  background-position: center ;
+  height: 488px;
+}
+.intro-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  padding-bottom: 1em;
+}
+.intro--date{
+  order: -1;
+}
+
+.continue-link{
+  width: 100%;                            ;
+  text-align:center ;
+  margin: 1em 0;
+}
+footer{
+  background-color: #202020;
+  color: #fff;
+  text-align: center;
+  padding: 1.5em 0;
+}
