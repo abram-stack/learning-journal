@@ -27,11 +27,30 @@ h2{
   font-size: 1.3rem;
 }
 .logo{
-  font-family: 'PT Mono', monospace;;
+  font-family: 'PT Mono', monospace;
+  cursor: pointer;
+  text-decoration: none;
+  color: #404040;
+  font-size: 1.3rem;
 }
 
+.post--description{
+  color: #404040;
+  font-size: .9rem;
+}
 
-
+@media (min-width:700px){
+  h1{
+    font-size: 3rem;
+  }
+  h2{font-size: 1.75rem;}
+  body{
+    font-size: 1.125rem
+  };
+  .post--description{
+    font-size: 1rem;
+  }
+}
 /* NAVIGATION */
 .header-container{
   display: flex;
@@ -39,15 +58,21 @@ h2{
   align-items: center;
   width: 100%;
 }
-.main-nav ul{
+.main-nav{
   display: flex;
   list-style: none;
 }
 .nav-link{
-  border: 1px solid blue;
   margin-left: .8em;
   text-decoration: none;
   text-transform: uppercase;
+  color: #404040;
+}
+.nav-link:hover,
+.nav-link:focus{
+  color: #202020;
+  border-bottom: 1px solid #202020;
+  transition: color ease 300ms;
 }
 
 /* LAYOUT*/
@@ -81,6 +106,32 @@ h2{
   width: 100%;                            ;
   text-align:center ;
   margin: 1em 0;
+}
+
+@media (min-width:700px){
+  .posts{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr) );
+    grid-template-rows: repeat(2, minmax(500px, 1fr));
+    gap: 1em;
+  }
+}
+/* POST */
+.post{
+  margin: 2em 0;
+  display: flex;
+  gap:1em;
+  flex-direction: column;
+}
+
+.post--img{
+  order: -1;
+}
+.post--title{
+  order: 1;
+}
+.post--description{
+  order: 2;
 }
 footer{
   background-color: #202020;
